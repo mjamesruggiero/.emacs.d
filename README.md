@@ -1,68 +1,49 @@
-# My emacs settings
+# Emacs settings
 
-An ever-changing set of emacs settings. Micro-optimizations are super fun.
-These are used in the [Emacs Rocks](http://emacsrocks.com) screencasts.
-You can also see some thoughts behind the settings on my [What the .emacs.d!?](http://whattheemacsd.com)-blog.
+Settings forked from magnars/.emacs.d
 
 ## Setup
 
+Ensure to toast your .emacs file if you have one. Also delete anything inside your .emacs.d.
+
 To grab all the dependencies:
 
-    git clone --recursive git://github.com/magnars/.emacs.d.git
+    git clone --recursive git://github.com:jamesthompson/.emacs.d.git
 
 The first time you start emacs, it will install some additional packages
 that are best handled by the package manager.
 
 ## Install emacs on mac
 
-I use Cocoa Emacs, installed like this:
+    brew install emacs
 
-    brew install emacs --cocoa
+I removed the stock emacs version from Mac OS X 10.9 in /usr/bin
 
-To open it with Alfred or Quicksilver, you have to copy `Emacs.app` into
-`/Applications` instead of the symlink that brew places there.
+I manually installed Emacs cocoa binary into /Applications.
 
-## Tips for using these emacs settings
+## Idiosyncrasies
 
-If you want to use my settings straight out of the box, here are some things to note:
+ * Meta key is bound to command on a Mac.
 
- * I recommend starting with a blank emacs +
-   [Technomancy's better-defaults package](https://github.com/technomancy/better-defaults),
-   and then dig through this repo for useful nuggets, instead of forking it directly.
-
- * The key bindings are optimized for a norwegian keyboard layout.
-
- * Start by reading up on all the cool stuff in key-bindings.el.
+ * Key bindings are listed in settings/key-bindings.el
 
  * You quit emacs with `C-x r q`, mnemonic *Really Quit*.
 
  * Find file in project with `C-x o`, in dir with `C-x C-f`, recent with `C-x f`
 
- * Add your user- and project-specific stuff in .emacs.d/users/[machine name]/*.el
-
- * `C-h` is rebound to backspace, like in the shell. Get help on `F1` instead.
+ * Help is bound to `F1`. `C-h` is rebound to backspace, like in the shell.
 
  * Autocomplete with `C-.` (autocomplete entire lines with `C-:`)
 
- * expand-region is your friend. Find its bound key by doing `F1 f er/expand-region`
+ * Expand-region is bound to `C-'`
 
- * Undo with `C-_` and redo with `M-_`. Watch the undo-tree with `C-x u`
+ * Undo with `C-_` or `C-/` and redo with `M-_`. Watch the undo-tree with `C-x u`
 
- * Quickly jump anywhere in the buffer with `C-ø` then the starting letter of a word.
+ * Quickly jump anywhere in the buffer with `M-g` then the starting letter of a word. Press the letter highlighted to go there.
 
  * Indent and clean up white space in the entire buffer with `C-c n`
 
- * On a mac, the Meta key `M` is bound to Command.
-
- * I recommend rebinding Caps Lock to Ctrl and use that instead of the often badly placed Ctrl-key.
-
- * Watch [emacsrocks.com](http://emacsrocks.com)
-
-## Survival guide for the first week of emacs
-
-When you start using emacs for the first time, your habits fight you every inch
-of the way. Your fingers long for the good old familiar keybindings. Here's an
-overview of the most commonly used shortcuts to get you through this pain:
+## Help
 
 * `C      ` Shorthand for the ctrl-key
 * `M      ` Shorthand for the meta-key (bound to cmd on my mac settings)
@@ -81,14 +62,13 @@ overview of the most commonly used shortcuts to get you through this pain:
 
 ### Cut copy and paste
 
-* `C-space` Start marking stuff. C-g to cancel.
+* `C-space` Start marking stuff. C-g to cancel. Navigate however you desire to expand the region, you don't have to press anything to close it.
 * `C-w    ` Cut (aka kill)
 * `C-k    ` Cut till end of line
 * `M-w    ` Copy
 * `C-y    ` Paste (aka yank)
 * `M-y    ` Cycle last paste through previous kills
 * `C-x C-y` Choose what to paste from previous kills
-* `C-@    ` Mark stuff quickly. Press multiple times
 
 ### General
 
@@ -123,3 +103,7 @@ overview of the most commonly used shortcuts to get you through this pain:
 * `F1 t   ` Basic tutorial
 * `F1 k   ` Help for a keybinding
 * `F1 r   ` Emacs' extensive documentation
+
+### Magit (Git wrapper)
+
+* `C-x m`. `s` to stage, `c` to commit. `C-c C-c` to finish commit msg buffer.
