@@ -15,3 +15,8 @@ site-lisp/adventur-mode
 /url/
 /var/
 /.sx/
+/recentf
+/ido.last
+/history
+/SessionDesktop.el
+/.mc-lists.el
