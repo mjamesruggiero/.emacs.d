@@ -189,7 +189,7 @@
 (require 'multifiles)
 
 ;;powerline
-(require 'setup-powerline)
+;(require 'setup-powerline)
 
 ;; Don't use expand-region fast keys
 (setq expand-region-fast-keys-enabled nil)
@@ -235,4 +235,6 @@
 (when (file-exists-p user-settings-dir)
   (mapc 'load (directory-files user-settings-dir nil "^[^#].*el$")))
 
-(require 'setup-vars)
+;(require 'setup-vars)
+(require 'evil)
+(evil mode 1)

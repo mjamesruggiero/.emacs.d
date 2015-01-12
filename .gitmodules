@@ -112,3 +112,6 @@
 [submodule "site-lisp/datomic-snippets"]
         path = site-lisp/datomic-snippets
         url = https://github.com/magnars/datomic-snippets.git
+[submodule "site-lisp/emacs-powerline"]
+        path = site-list/emacs-powerline
+        url = https://github.com/jonathanchu/emacs-powerline
