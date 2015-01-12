@@ -8,7 +8,7 @@ Ensure to toast your .emacs file if you have one. Also delete anything inside yo
 
 To grab all the dependencies:
 
-    git clone --recursive git://github.com:jamesthompson/.emacs.d.git
+    git clone --recursive git://github.com:mjamesruggiero/.emacs.d.git
 
 The first time you start emacs, it will install some additional packages
 that are best handled by the package manager.
